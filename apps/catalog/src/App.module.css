@@ -1,0 +1,26 @@
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--background);
+  box-sizing: border-box;
+  padding: var(--space-m);
+}
+.grid {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-block-start: var(--space-m);
+  margin-block-end: var(--space-m);
+  padding: 0;
+}
+
+.grid li {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: white;
+  border-radius: 0.25rem;
+  margin: var(--space-s);
+  box-shadow: 2px 2px 5px 3px #00000011;
+}

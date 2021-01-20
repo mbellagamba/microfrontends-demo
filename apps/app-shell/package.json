@@ -1,0 +1,37 @@
+{
+  "name": "app-shell",
+  "version": "1.0.0",
+  "description": "A microfrontends demo application",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --mode=development",
+    "build": "webpack --mode production",
+    "test": "jest"
+  },
+  "keywords": [
+    "microfrontends",
+    "micro-frontends",
+    "micro-apps"
+  ],
+  "author": "Mirco Bellagamba <mirco.bellag@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "url": "git+https://github.com/mbellagamba/microfrontends-demo.git",
+    "type": "git"
+  },
+  "dependencies": {
+    "core-js": "^3.8.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.1",
+    "prettier": "^2.2.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.16.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+  app-shell:
+    image: node:14-alpine
+    working_dir: /app-shell
+    volumes:
+      - ./apps/app-shell:/app-shell
+    ports:
+      - "3000:3000"
+    command: sh -c "npm install && npm start"
+    links:
+      - landing
+      - auth
+      - catalog
+  landing:
+    image: node:14-alpine
+    working_dir: /landing
+    volumes:
+      - ./apps/landing:/landing
+    ports:
+      - "3001:3001"
+    command: sh -c "npm install && npm start"
+  auth:
+    image: node:14-alpine
+    working_dir: /auth
+    volumes:
+      - ./apps/auth:/auth
+    ports:
+      - "3002:3002"
+    command: sh -c "npm install && npm start"
+  catalog:
+    image: node:14-alpine
+    working_dir: /catalog
+    volumes:
+      - ./apps/catalog:/catalog
+    ports:
+      - "3003:3003"
+    command: sh -c "npm install && npm start"
