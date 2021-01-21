@@ -4,7 +4,7 @@ A local environment for a demo micro-frontends implementation. The app is compos
 
 ## Requirements
 
-Make sure to have installed Docker and Docker Compose on your system.
+Make sure to have installed Docker 17.06.0+ and Docker Compose on your system.
 
 ## Getting started
 
