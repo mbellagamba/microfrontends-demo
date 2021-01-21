@@ -4,15 +4,15 @@ const appsRegistry = {
   catalog: "http://localhost:3003",
 };
 
-function loadApp() {
+function renderApp() {
   const { pathname } = window.location;
   const appKey =
     Object.keys(appsRegistry).find((key) => pathname.startsWith(`/${key}`)) ||
     "landing";
-  fetchApp(appsRegistry[appKey]);
+  fetchMicrofrontend(appsRegistry[appKey]);
 }
 
-async function fetchApp(url) {
+async function fetchMicrofrontend(url) {
   const response = await fetch(`${url}/manifest.json`);
   if (response.ok) {
     const manifest = await response.json();
@@ -21,11 +21,11 @@ async function fetchApp(url) {
 }
 
 function appendScript(manifest) {
-  for (const entry of Object.entries(manifest)) {
+  for (const scriptUrl of Object.values(manifest)) {
     const script = document.createElement("script");
-    script.src = entry[1];
+    script.src = scriptUrl;
     document.head.append(script);
   }
 }
 
-loadApp();
+renderApp();

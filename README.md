@@ -11,6 +11,12 @@ Make sure to have installed Docker 17.06.0+ and Docker Compose on your system.
 Start developing running this command.
 
 ```shell
+docker-compose up
+```
+
+or this one to start containers silently
+
+```shell
 docker-compose up -d
 ```
 
@@ -18,7 +24,7 @@ For each micro-frontend, it will create a container, install dependencies and ru
 
 When all containers are up and running, the app is available at http://localhost:3000.
 
-Stop containers running this command.
+Stop containers pressing `ctrl+C` or, if started silently, running this command
 
 ```shell
 docker-compose down

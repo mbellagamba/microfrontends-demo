@@ -19,7 +19,7 @@ export default function App() {
   };
   return (
     <div className={styles.container}>
-      {isSessionExpired() && <p>Sessione scaduta.</p>}
+      {isSessionExpired() && <p>Session expired.</p>}
       <div className={styles.card}>
         <h1>Welcome</h1>
         <form onSubmit={handleSubmit}>
